@@ -2,14 +2,62 @@
 <html lang="eng">
   <head>
     <meta charset="utf-8">
-    <title>Lab 6-1: Creating a user-defined function in JavaScript</title>
+    <title>Lab6-1 + Optional</title>
     <script>
         function myFunction() {
-            alert("The HTML page has loaded.");
+            console.log("Welcome to Alex's Car quiz :)");
         }
+        function vote() {
+                let fav = "Your favorite sport is: ";
+                for (let i = 0; i < document.myform.cars.length; i++) {
+                    if (document.myform.cars[i].checked == true) {
+                        fav = fav + document.myform.cars[i].value;
+                    }
+                }
+                if (t == "Your favorite sport is: ") {
+                    document.getElementById("txt").value = "Pick your favorite brand";
+                } else {
+                    document.getElementById("txt").value = fav;
+                    document.getElementById("txt1").value = fav;
+                    document.getElementById("txt2").value = fav;
+                }
+            }
+            function upperCase() {
+                var x = document.getElementById("txt").value;
+                document.getElementById("txt").value = x.toUpperCase();
+            }
+            function SayHello() {
+                console.log("Your mouse is over the text!");
+            }
+            function SayGoodbye() {
+                console.log("Your mouse has left the text!");
+            }
+
         </script>
   </head>
   <body>
     <body onload="myFunction();">
+        <h3>CIW Advanced HTML5 and CSS3 Specialist</h3>
+        <hr/>
+        <h4>Event Handler Examples</h4>
+        <h5>Pick your favorite german car brand:</h5>
+        <form name="myform">
+        <p>
+        <input type="radio" name="car" value="Football">Porsche<br>
+            <input type="radio" name="car" value="Hockey">Mercedes<br>
+            <input type="radio" name="car" value="Auto Racing">Audi<br>
+            <input type="radio" name="car" value="MMA">BMW<br>
+            <input type="radio" name="car" value="Basketball">VW<br>
+        </p><p>
+            <input type="button" value="VOTE" onclick="vote()"> 
+            <input type="reset" value="RESET">
+        </p><p>
+            <input type="text" id="txt" size="40" onblur="upperCase()" > Click in then out!
+        </p><p>
+            <input type="text" id="txt1" size="40" onmouseover="SayHello()" > Hover over this field!
+        </p><p>
+            <input type="text" id="txt2" size="40" onmouseout="SayGoodbye()" > Hover this field then away!
+        </p>
+        </form>
   </body>
 </html>
