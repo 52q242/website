@@ -9,12 +9,12 @@
         }
         function vote() {
                 let fav = "Your favorite sport is: ";
-                for ( i = 0; i < document.myform.cars.length; i++) {
+                for (i = 0; i < document.myform.cars.length; i++) {
                     if (document.myform.cars[i].checked == true) {
                         fav = fav + document.myform.cars[i].value;
                     }
                 }
-                if (t == "Your favorite sport is: ") {
+                if (fav == "Your favorite car is: ") {
                     document.getElementById("txt").value = "Pick your favorite brand";
                 } else {
                     document.getElementById("txt").value = fav;
