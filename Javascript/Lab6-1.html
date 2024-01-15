@@ -9,9 +9,9 @@
         }
         function vote() {
                 let fav = "Your favorite car is: ";
-                for (i = 0; i < document.myform.cars.length; i++) {
-                    if (document.myform.cars[i].checked == true) {
-                        fav = fav + document.myform.cars[i].value;
+                for (i = 0; i < document.myform.car.length; i++) {
+                    if (document.myform.car[i].checked == true) {
+                        fav = fav + document.myform.car[i].value;
                     }
                 }
                 if (fav == "Your favorite car is: ") {
