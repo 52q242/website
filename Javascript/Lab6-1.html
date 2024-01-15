@@ -8,7 +8,7 @@
             console.log("Welcome to Alex's Car quiz :)");
         }
         function vote() {
-                let fav = "Your favorite sport is: ";
+                let fav = "Your favorite car is: ";
                 for (i = 0; i < document.myform.cars.length; i++) {
                     if (document.myform.cars[i].checked == true) {
                         fav = fav + document.myform.cars[i].value;
@@ -43,11 +43,11 @@
         <h5>Pick your favorite german car brand:</h5>
         <form name="myform">
         <p>
-        <input type="radio" name="car" value="Football">Porsche<br>
-            <input type="radio" name="car" value="Hockey">Mercedes<br>
-            <input type="radio" name="car" value="Auto Racing">Audi<br>
-            <input type="radio" name="car" value="MMA">BMW<br>
-            <input type="radio" name="car" value="Basketball">VW<br>
+        <input type="radio" name="car" value="Porsche">Porsche<br>
+            <input type="radio" name="car" value="Mercedes">Mercedes<br>
+            <input type="radio" name="car" value="Audi">Audi<br>
+            <input type="radio" name="car" value="BMW">BMW<br>
+            <input type="radio" name="car" value="VW">VW<br>
         </p><p>
             <input type="button" value="VOTE" onclick="vote()"> 
             <input type="reset" value="RESET">
