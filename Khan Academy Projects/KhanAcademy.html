@@ -15,15 +15,18 @@
     createCanvas(400, 400); // Create a canvas
 
   }
-  
+  function drawBackground() {
+  noStroke();
     background(99, 47, 76);
     // The ground
     fill(99, 47, 47);
     rect(0, 300, 400, 100);  
-
     // The sun
     fill(255, 162, 41);
     ellipse(80, 64, 100, 100);  
+  }   
+   
+ 
 
     // The snowman
     fill(255, 255, 255);
