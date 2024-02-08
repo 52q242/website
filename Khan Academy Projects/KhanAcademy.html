@@ -7,23 +7,6 @@
 <style>
 h1, footer {
     text-align: center;
-}
-canvas {
-background(99, 47, 76);
-// The ground
-fill(99, 47, 47);
-rect(0, 300, 400, 100);  
-
-// The sun
-fill(255, 162, 41);
-ellipse(80, 64, 100, 100);  
-
-// The snowman
-fill(255, 255, 255);
-ellipse(200, 300, 150, 150);
-ellipse(200, 200, 100, 100);
-ellipse(200, 120, 75, 75);
-}
 footer {
     margin-top: 30px;
 }
@@ -33,6 +16,19 @@ footer>a, footer>a:visited {
 }
 </style>
 <script>
+
+background(99, 47, 76);
+fill(99, 47, 47);
+rect(0, 300, 400, 100);  
+
+fill(255, 162, 41);
+ellipse(80, 64, 100, 100);  
+
+fill(255, 255, 255);
+ellipse(200, 300, 150, 150);
+ellipse(200, 200, 100, 100);
+ellipse(200, 120, 75, 75);
+
 function init() {
   var loc = window.location.href;
   var HTMLvalidLinkStr = 'http://validator.w3.org/check?uri=' + loc;
