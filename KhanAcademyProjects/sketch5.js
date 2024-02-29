@@ -2,7 +2,7 @@
 let sketch5 = function(s) {
     s.setup = function() {
         s.createCanvas(s.windowWidth, 500);
-        s.backround(255)
+        s.backround(255);
     };
     s.draw = function(){
         s.stroke(s.random(255), s.random(255), s.random(255));
