@@ -2,9 +2,9 @@
 let sketch5 = function(s) {
     s.setup = function() {
         s.createCanvas(s.windowWidth, 500);
+        s.backround(255)
     };
     s.draw = function(){
-        s.backround(255)
         s.stroke(s.random(255), s.random(255), s.random(255));
         s.strokeWeight(5);
         s.line(s.pmouseX, s.pmouseY, s.mouseX, s.mouseY);
