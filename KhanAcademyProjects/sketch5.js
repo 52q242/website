@@ -1,7 +1,7 @@
 
 let sketch5 = function(s) {
     s.setup = function() {
-        s.createCanvas(windowWidth, 500);
+        s.createCanvas(s.windowWidth, 500);
     };
     s.draw = function(){
         s.stroke(random(255), random(255), random(255));
