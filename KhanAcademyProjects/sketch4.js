@@ -17,4 +17,4 @@ let sketch4 = function(apple) {
       };
     };
     
-    let ap5 = new p5(sketch4)
+    let ap5 = new p5(sketch4);
