@@ -11,7 +11,14 @@ let sketch3 = function(name) {
     name.textSize(howBig);
     name.background(0, 238, 255);
     let myName = "Alex"; 
-    name.text(myName, name.mouseX, name.mouseY); 
+    // check if the mouse is pressed and inside the canvas
+    if (name.mouseIsPressed && name.mouseX >= 0 && name.mouseX <= name.width && name.mouseY >= 0 && name.mouseY <= name.height) {
+      // update the name's position to the mouse position
+      name.text(myName, name.mouseX, name.mouseY); 
+    } else {
+      // keep the name's position in the center of the canvas
+      name.text(myName, name.width / 2, name.height / 2);
+    }
   };
 };
 
