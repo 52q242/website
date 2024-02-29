@@ -17,5 +17,6 @@ let sketch4 = function(apple) {
         apple.ellipse(apple.mouseX, apple.mouseY, 60, 60);
       };
     };
+};
     
-    let ap5 = new p5(sketch4);
+let ap5 = new p5(sketch4);

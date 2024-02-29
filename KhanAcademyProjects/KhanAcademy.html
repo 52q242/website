@@ -3,9 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Canvas Experiment Number 1</title>
-  <style>
 
-</style>
 <script>  
 
     function init() {
@@ -16,30 +14,12 @@
       document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
       document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
 
-      drawSomething();
-    }
-
-    function drawSomething() {
-      const canvas = document.getElementById("myCanvas");
-      const context = canvas.getContext("2d");
-
-      context.fillRect(10, 10, 100, 100);
-    }
-
-    window.onload = init;
   </script>
 </head>
 <body>
 <header>
   <h1>Canvas Experiment Number 1</h1>
 </header>
-
-<main>
-  <canvas id="myCanvas" width="600" height="200">
-    Sorry, your old browser doesn't support the canvas element. Time for a new
-    browser!
-  </canvas>
-</main>
 
 <footer>
   <a id="vLink1"><strong> HTML </strong> Valid! </a> |
