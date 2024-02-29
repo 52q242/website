@@ -3,8 +3,8 @@ let sketch5 = function(s) {
     s.setup = function() {
         s.createCanvas(s.windowWidth, 500);
         s.stroke(255);
-        s.fill(255,255,255,100);
-        rect(0,0,s.windowWidth, 500);
+        s.fill(255);
+        s.rect(0,0,s.windowWidth, 500);
 
     };
     s.draw = function(){
