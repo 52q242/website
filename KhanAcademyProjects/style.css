@@ -6,7 +6,7 @@ html, body {
   background: #b3d4fc;
 }
 canvas {
-  display: block;
+  display: inline-block;
   position: absolute;
   left: 50%;
   top: 50%;
