@@ -15,7 +15,7 @@ let sketch5 = function(s) {
     };
 };
 
-let sp5 = new p5;
+let sp5 = new p5(sketch5);
 
    
 
