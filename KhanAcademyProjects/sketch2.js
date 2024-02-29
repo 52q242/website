@@ -1,3 +1,4 @@
+
 let faceSize = 170;
 let mouthSize = 1/2 * faceSize;
 let eyeSize = 2/15 * faceSize; 
@@ -81,3 +82,4 @@ function draw() {
   rect(note2X + 2, note2Y - 37, 4, 33);
   rect(note2X - 5, note2Y - 37, 11, 9);
 }
+-->

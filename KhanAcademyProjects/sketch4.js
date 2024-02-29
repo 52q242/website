@@ -4,7 +4,7 @@ let sketch4 = function(apple) {
     apple.setup = function() {
         apple.createCanvas(400, 400);
       };
-      apple.draw =function() {
+    apple.draw =function() {
         apple.background(255);
         apple.noStroke();
         apple.fill(48, 130, 31);
