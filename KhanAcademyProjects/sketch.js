@@ -13,7 +13,7 @@ tomato.setup = function() {
     tomato.fill(48, 130, 31);
     tomato.rect(176, 103, 12, 32); 
     tomato.fill(255);
-    tomato.ellipse(mouseX, mouseY, 60, 60);
+    tomato.ellipse(tomato.mouseX, tomato.mouseY, 60, 60);
   };
 };
 
