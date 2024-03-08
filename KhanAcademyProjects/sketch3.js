@@ -7,22 +7,17 @@ let sketch3 = function(name) {
   };
 
   name.draw = function() {
+    if (name.mouseX >= 0 && name.mouseX <= name.width && name.mouseY >= 0 && name.mouseY <= name.height) 
+    {
     howBig += 0.5; 
+
+    }
+
     name.textSize(howBig);
     name.background(0, 238, 255);
     let myName = "Alex"; 
-  
-    if (name.mouseX >= 0 && name.mouseX <= name.width && name.mouseY >= 0 && name.mouseY <= name.height) {
-
-      name.text(myName, name.mouseX, name.mouseY); 
-    } else {
-
-      name.text(myName, name.mouseX, name.mouseY);
+    name.text(myName, name.mouseX, name.mouseY); 
     }
   };
-};
 
-
-
-
-
+let myp5 = new p5(sketch3)
