@@ -1,6 +1,10 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
 }
 
 .container {
@@ -9,6 +13,37 @@ body {
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 3rem;
+    color: #ff6f61;
+}
+
+label {
+    font-size: 1.2rem;
+    color: #333;
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, textarea:focus {
+    outline: none;
+    border-color: #2f80ed;
 }
 
 .button-container {
@@ -42,4 +77,27 @@ body {
     background-color: #2f80ed;
     color: #fff;
     transform: scale(0.98);
+}
+
+#recipeContainer {
+    margin-top: 20px;
+}
+
+#recipeContainer h2, #recipeContainer h3 {
+    color: #333;
+}
+
+#recipeContainer h2 {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+#recipeContainer h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+#recipeContainer p {
+    font-size: 1rem;
+    margin-top: 5px;
 }
