@@ -17,7 +17,29 @@ body {
     margin-top: 20px;
 }
 
-.button-container button {
-    padding: 10px 20px;
-    font-size: 16px;
+.styled-button {
+    text-decoration: none;
+    color: #2f80ed;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.styled-button:hover {
+    background-color: #2f80ed;
+    color: #fff;
+}
+
+.styled-button:focus {
+    outline: none;
+}
+
+.styled-button:active {
+    background-color: #2f80ed;
+    color: #fff;
+    transform: scale(0.98);
 }
