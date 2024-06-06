@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Cookbook</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .button-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Interactive Cookbook</h1>
+    <label for="recipeTitle">Recipe Title:</label>
+    <input type="text" id="recipeTitle" placeholder="Enter recipe title"><br><br>
+
+    <label for="ingredients">Ingredients:</label><br>
+    <textarea id="ingredients" rows="5" placeholder="Enter ingredients"></textarea><br><br>
+
+    <label for="steps">Steps:</label><br>
+    <textarea id="steps" rows="5" placeholder="Enter steps"></textarea><br><br>
+
+    <div class="button-container">
+        <button onclick="prevPage()">Previous</button>
+        <button onclick="addPage()">Add Page</button>
+        <button onclick="nextPage()">Next</button>
+    </div>
+
+    <div id="recipeContainer" style="margin-top: 20px;">
+        <h2 id="displayTitle"></h2>
+        <h3>Ingredients</h3>
+        <p id="displayIngredients"></p>
+        <h3>Steps</h3>
+        <p id="displaySteps"></p>
+    </div>
+</div>
+
+<script>
+    let recipes = [];
+    let currentPage = 0;
+
+    function addPage() {
+        const title = document.getElementById('recipeTitle').value;
+        const ingredients = document.getElementById('ingredients').value;
+        const steps = document.getElementById('steps').value;
+
+        if (title && ingredients && steps) {
+            recipes.push({ title, ingredients, steps });
+            document.getElementById('recipeTitle').value = '';
+            document.getElementById('ingredients').value = '';
+            document.getElementById('steps').value = '';
+            currentPage = recipes.length - 1;
+            displayPage();
+        } else {
+            alert('Please fill out all fields before adding a page.');
+        }
+    }
+
+    function displayPage() {
+        if (recipes.length > 0 && currentPage >= 0 && currentPage < recipes.length) {
+            document.getElementById('displayTitle').innerText = recipes[currentPage].title;
+            document.getElementById('displayIngredients').innerText = recipes[currentPage].ingredients;
+            document.getElementById('displaySteps').innerText = recipes[currentPage].steps;
+        }
+    }
+
+    function nextPage() {
+        if (currentPage < recipes.length - 1) {
+            currentPage++;
+            displayPage();
+        }
+    }
+
+    function prevPage() {
+        if (currentPage > 0) {
+            currentPage--;
+            displayPage();
+        }
+    }
+</script>
+
+</body>
+</html>
