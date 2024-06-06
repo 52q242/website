@@ -35,7 +35,7 @@
 </div>
 
 <script>
-    let recipes = [];
+    let recipes = JSON.parse(localStorage.getItem('recipes')) || [];
     let currentPage = 0;
 
     function addPage() {
@@ -45,6 +45,7 @@
 
         if (title && ingredients && steps) {
             recipes.push({ title, ingredients, steps });
+            localStorage.setItem('recipes', JSON.stringify(recipes));
             document.getElementById('recipeTitle').value = '';
             document.getElementById('ingredients').value = '';
             document.getElementById('steps').value = '';
@@ -73,6 +74,13 @@
     function prevPage() {
         if (currentPage > 0) {
             currentPage--;
+            displayPage();
+        }
+    }
+
+    // Display the first recipe on load, if available
+    window.onload = function() {
+        if (recipes.length > 0) {
             displayPage();
         }
     }
